@@ -9,25 +9,43 @@ import { ImNewspaper } from "react-icons/im";
 import { GiDiamondTrophy, GiEclipse } from "react-icons/gi";
 import { RiLightbulbLine, RiFeedbackLine } from "react-icons/ri";
 import { FiSettings, FiHelpCircle } from "react-icons/fi";
+import { BiDumbbell } from "react-icons/bi";
+import { BsCurrencyBitcoin } from "react-icons/bs";
 
 export const categories = [
-    { name: "New", icon: <AiFillHome className='text-2xl'/>, type: "home" },
-    { name: "Trending", icon: <MdLocalFireDepartment className='text-2xl' />, type: "category" },
-    { name: "Music", icon: <CgMusicNote className='text-2xl' />, type: "category" },
-    { name: "Films", icon: <FiFilm className='text-2xl' />, type: "category" },
-    { name: "Live", icon: <MdLiveTv className='text-2xl' />, type: "category" },
-    { name: "Gaming", icon: <IoGameControllerSharp className='text-2xl'/>, type: "category" },
-    { name: "News", icon: <ImNewspaper  className='text-2xl'/>, type: "category" },
-    { name: "Sports", icon: <GiDiamondTrophy className='text-2xl' />, type: "category" },
-    { name: "Learning", icon: <RiLightbulbLine className='text-2xl'/>, type: "category" },
-    {
-        name: "Fashion & beauty",
-        icon: <GiEclipse  className='text-2xl' />,
-        type: "category",
-        divider: true,
-    },
-    { name: "Settings", icon: <FiSettings className='text-2xl'/>, type: "menu" },
-    { name: "Report History", icon: <AiOutlineFlag className='text-2xl'/>, type: "menu" },
-    { name: "Help", icon: <FiHelpCircle className='text-2xl'/>, type: "menu" },
-    { name: "Send feedback", icon: <RiFeedbackLine className='text-2xl'/>, type: "menu" },
+  { name: "New", icon: <AiFillHome className="text-2xl" /> },
+  {
+    name: "Trending",
+    icon: <MdLocalFireDepartment className="text-2xl" />,
+  },
+  {
+    name: "Music",
+    icon: <CgMusicNote className="text-2xl" />,
+  },
+  { name: "Films", icon: <FiFilm className="text-2xl" /> },
+  { name: "Live", icon: <MdLiveTv className="text-2xl" /> },
+  {
+    name: "Gaming",
+    icon: <IoGameControllerSharp className="text-2xl" />,
+  },
+  {
+    name: "News",
+    icon: <ImNewspaper className="text-2xl" />,
+  },
+  {
+    name: "Sports",
+    icon: <GiDiamondTrophy className="text-2xl" />,
+  },
+  {
+    name: "Learning",
+    icon: <RiLightbulbLine className="text-2xl" />,
+  },
+  {
+    name: "Fashion",
+    icon: <GiEclipse className="text-2xl" />,
+  },
+  { name: "Gym", icon: <BiDumbbell className="text-2xl" /> },
+
+  { name: "Crypto", icon: <BsCurrencyBitcoin className="text-2xl" /> },
 ];
+
