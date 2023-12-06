@@ -4,12 +4,12 @@ import ChannelComponent from "./ChannelComponent";
 import SingelPlaylist from "./SingelPlaylist";
 function ResultComponent({ videos, title }) {
   return (
-    <div>
+    <div className='w-full'>
       <p className="text-red-500 text-xl font-medium pl-4">
         {title} <span className="text-white"> Videos </span>{" "}
       </p>
 
-      <div className="flex flex-row items-start justify-start text-white w-full flex-wrap  sm: sm:flex-row sm:gap-2 lg:gap-3">
+      <div className="flex flex-row items-start justify-start text-white w-full flex-wrap  sm: sm:flex-row sm:gap-2 lg:gap-3 w-full">
         {videos?.map((el, id) => {
           if (el.type == "video") {
             //  console.log(el?.video?.thumbnails[-1]?.url)
