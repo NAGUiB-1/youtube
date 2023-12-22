@@ -13,6 +13,9 @@
 .active {
   background-color: #fc1503;
 }
-body{
+body {
   background: black;
+}
+li {
+  cursor: pointer;
 }

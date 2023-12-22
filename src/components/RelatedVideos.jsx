@@ -2,14 +2,14 @@ import { useState } from "react";
 import Video from "./Video";
 import ChannelComponent from "./ChannelComponent";
 import SingelPlaylist from "./SingelPlaylist";
-function ResultComponent({ videos, title }) {
+function RelatedVideos({ videos, title }) {
   return (
     <div className="w-full">
       <p className="text-red-500 text-xl font-medium pl-4">
         {title} <span className="text-white"> Videos </span>{" "}
       </p>
 
-      <div className="flex flex-row items-start justify-start text-white flex-wrap  sm: sm:flex-row sm:gap-2 lg:gap-3 w-full md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="flex flex-col items-start justify-start text-white w-full  sm:gap-2 lg:gap-3 ">
         {videos?.map((el, id) => {
           if (el.type == "video") {
             return (
@@ -29,24 +29,9 @@ function ResultComponent({ videos, title }) {
               />
             );
           } else if (el.type == "channel") {
-            return (
-              <ChannelComponent
-                channelTitle={el.channel.title}
-                channelUsername={el.channel.username}
-                subscribers={el.channel.stats.subscribersText}
-                channelThumb={el.channel.avatar[0].url}
-                channelId={el.channel.channelId}
-                key={id}
-              />
-            );
+            return null;
           } else if (el.type == "playlist") {
-            return (
-              <SingelPlaylist
-                author={el?.playlist?.author?.title}
-                data={el.playlist}
-                key={id}
-              />
-            );
+            return null;
           }
         })}
       </div>
@@ -60,4 +45,4 @@ subscribers
 subscrip button
 avatar
 */
-export default ResultComponent;
+export default RelatedVideos;

@@ -9,7 +9,8 @@ const Navrbar = () => {
   let handleSearch = (e) => {
     e.preventDefault();
     navigate(`/search/${search}`);
-    setShowSearch(false)
+    setShowSearch(false);
+    setSearch(" ");
   };
   return (
     <div className="bg-black sticky z-50 top-0 w-full">
@@ -25,7 +26,7 @@ const Navrbar = () => {
           >
             <input
               type="search"
-              className="h-[70%] bg-inherit rounded-full  lw-60 sm:w-60 md:w-80 border border-gray-800 transition  text-white font-medium pl-1 "
+              className="h-[70%] bg-inherit rounded-full p-2 lw-60 sm:w-60 md:w-80 border border-gray-800 transition  text-white font-medium pl-1 "
               onChange={(e) => setSearch(e.target.value)}
               value={search}
               placeholder="Search any video... "
@@ -34,9 +35,10 @@ const Navrbar = () => {
               size={20}
               className="absolute right-1 cursor-pointer  text-white"
               onClick={() => {
-                navigate(`/search/${search}`);
-                setShowSearch(false)
-                
+                if (search.length > 1) {
+                  navigate(`/search/${search}`);
+                  setShowSearch(false);
+                }
               }}
             />
           </form>

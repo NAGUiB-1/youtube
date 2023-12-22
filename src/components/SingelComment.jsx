@@ -1,6 +1,6 @@
 import { AiOutlinePushpin, AiFillHeart } from "react-icons/ai";
 import { AiOutlineLike, AiOutlineDislike } from "react-icons/ai";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 export default function SnigelComment({
   creatorName,
   creatorThumb,
@@ -13,10 +13,13 @@ export default function SnigelComment({
   heart,
   authorId,
 }) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className=" flex gap-4 py-4 text-white w-full">
-      <div className="min-w-[48px] h-[48px] rounded-[50%] overflow-hidden cursor-pointer" onClick = {() => navigate(`/channel/${authorId}`)}>
+      <div
+        className="min-w-[48px] h-[48px] rounded-[50%] overflow-hidden cursor-pointer"
+        onClick={() => navigate(`/channel/${authorId}`)}
+      >
         <img
           className="w-[48px] h-[48px] "
           src={authorThumb}
@@ -31,7 +34,12 @@ export default function SnigelComment({
           </div>
         )}
         <p className=" opacity-50 text-sm flex justify-between items-center w-full">
-          <span className='cursor-pointer' onClick = {() => navigate(`/channel/${authorId}`)}>{authorName}</span>
+          <span
+            className="cursor-pointer"
+            onClick={() => navigate(`/channel/${authorId}`)}
+          >
+            {authorName}
+          </span>
           <span>{date}</span>
         </p>
         <p> {commentDetails}</p>
@@ -42,9 +50,7 @@ export default function SnigelComment({
           </div>
           <AiOutlineDislike className="cursor-pointer" />
           {heart && (
-            <div className="w-[30px] h-[30px] relative " 
-            
-            >
+            <div className="w-[30px] h-[30px] relative ">
               <img
                 src={creatorThumb}
                 alt={creatorName}

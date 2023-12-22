@@ -1,14 +1,17 @@
 import { useNavigate } from "react-router-dom";
 export default function ChannelSingelVideo({ data }) {
-  console.log(data);
   const navigate = useNavigate();
   return (
-    <div className=" w-full flex gap-2 cursor-pointer " onClick={() => navigate(`/video/${data?.videoId}`)}>
-      <div className=" overflow-hidden rounded-2xl w-[50%]  ">
+    <div
+      className=" w-full flex gap-2 cursor-pointer xl:h-[280px] hover:scale-90 transition-all"
+      onClick={() => navigate(`/video/${data?.videoId}`)}
+    >
+      <div className=" overflow-hidden rounded-2xl w-[50%]  xl:w-auto">
         <img
-          className="object-cover w-full h-full object-cover"
+          className="object-cover w-full h-full "
           src={data?.thumbnails[data?.thumbnails?.length - 1].url}
           alt=" "
+          load="lazy"
         />
       </div>
       <div className=" w-[50%] sm:text-2xl lg:text-3xl xl:text-4xl ">

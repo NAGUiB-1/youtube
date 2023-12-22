@@ -1,4 +1,4 @@
-export default function ({liStyle, active, setActive }) {
+export default function ({ liStyle, active, setActive }) {
   return (
     <ul className=" flex w-full justify-between ">
       <li

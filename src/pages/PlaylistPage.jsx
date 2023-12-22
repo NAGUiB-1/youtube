@@ -10,7 +10,7 @@ export default function PlaylistPage() {
   let [videos, setVideos] = useState([]);
   let [details, setDetails] = useState([]);
   useEffect(() => {
-    window. scrollTo(0, 0)
+    window.scrollTo(0, 0);
     fetchData(`playlist/videos/?id=${id}`).then((data) => {
       setVideos(data.contents);
     });
@@ -18,16 +18,16 @@ export default function PlaylistPage() {
       setDetails(data);
     });
   }, [id]);
-  console.log(videos);
-  if(videos.length){
+  if (videos.length) {
     return (
-    <div className=" ">
-      <PlaylistHeader data={details} />
-      {videos?.map((video, id) => (
-        <PlaylistVideos data={video.video} key={id} />
-      ))}
-    </div>
-  )} else {
-    return <Loader />
+      <div className=" ">
+        <PlaylistHeader data={details} />
+        {videos?.map((video, id) => (
+          <PlaylistVideos data={video.video} key={id} />
+        ))}
+      </div>
+    );
+  } else {
+    return <Loader />;
   }
 }

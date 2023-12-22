@@ -14,7 +14,6 @@ function Feed() {
 
   function onIntersection(entires) {
     const element = entires[0];
-    console.log(element);
     if (element.isIntersecting && hasMore) {
       fetchMoreItems();
     }
@@ -32,7 +31,6 @@ function Feed() {
   }
 
   useEffect(() => {
-    
     if (videos.length == 0) {
       fetchData(`search/?q=${selected}`).then((data) => {
         setVideos(data.contents);
@@ -50,13 +48,13 @@ function Feed() {
         observer.disconnect();
       }
     };
-   // setVideos([]);
-  }, [ videos]);
-useEffect(()=>{
-  setVideos([]);
-},[selected])
+    // setVideos([]);
+  }, [videos]);
+  useEffect(() => {
+    setVideos([]);
+  }, [selected]);
   return (
-    <div className="flex flex-col sm:flex-row sm:h-screen  sm:h-[calc(100vh-2.5rem)]">
+    <div className="flex flex-col sm:flex-row sm:h-[calc(100vh-2.5rem)]">
       <Sidebar />
       <div className="sm:w-full sm:h-[calc(100vh-2.5rem)] sm:overflow-y-scroll">
         {videos.length ? (

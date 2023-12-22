@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
 export default function PlaylistVideos({ data }) {
-  console.log(data);
   const navigate = useNavigate();
   return (
     <div

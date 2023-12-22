@@ -19,8 +19,6 @@ function Result() {
     );
   }, [keySearch]);
 
-  console.log(params.searchTag);
-
   return (
     <>
       {videos.length ? (
@@ -32,10 +30,7 @@ function Result() {
           <div className="flex flex-row items-start justify-start text-white w-full flex-wrap gap-2 sm:gap-4  ">
             {videos?.map((el, id) => {
               if (el.type == "video") {
-                //  console.log(el?.video?.thumbnails[-1]?.url)
-                return (
-                  <ChannelSingelVideo data={el?.video} />
-                );
+                return <ChannelSingelVideo data={el?.video} />;
               } else if (el.type == "channel") {
                 return (
                   <ChannelComponent

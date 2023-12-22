@@ -7,9 +7,8 @@ export default function CommentsPopup({
   authorThumb,
   authorName,
 }) {
-  console.log(data);
   return (
-    <div className=" h-[calc(100vh-200px)]  w-full bg-black px-4 fixed left-0 z-50 overflow-y-auto text-white ">
+    <div className=" h-[calc(100vh-200px)] top-[250px] w-full bg-black px-4 fixed lg:static left-0 z-50 overflow-y-auto text-white ">
       <div className="container mx-auto ">
         <div className=" flex justify-between items-center mb-4 font-bold text-xl sticky left-0 top-0 bg-black py-4 z-50">
           <p> Comments • {commentsCount} </p>

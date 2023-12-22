@@ -7,6 +7,7 @@ import VideoPage from "./pages/VideoPage";
 import ChannelPage from "./pages/ChannelPage";
 import PlaylistPage from "./pages/PlaylistPage";
 import { Routes, Route } from "react-router-dom";
+import Error from "./pages/Error";
 function App() {
   return (
     <div className="container mx-auto bg-black w-full">
@@ -17,9 +18,8 @@ function App() {
         <Route path="/video/:videoId" element={<VideoPage />} />
         <Route path="/channel/:channelId" element={<ChannelPage />} />
         <Route path="/playlist/:playlistId" element={<PlaylistPage />} />
+        <Route path="*" element={<Error />} />
       </Routes>
-      
-      
     </div>
   );
 }

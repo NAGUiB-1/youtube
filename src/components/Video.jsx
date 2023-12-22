@@ -15,7 +15,7 @@ export default function Video({
   const time = new Date(videoLong * 1000).toISOString().slice(11, 19);
 
   return (
-    <div className="w-full sm:w-[49%] xl:w-[32%] rounded-lg overflow-hidden ">
+    <div className="w-full  rounded-lg overflow-hidden cursor-pointer hover:scale-90 transition-all">
       <div
         className="w-full relative"
         onClick={() => navigate(`/video/${videoId}`)}
@@ -55,14 +55,3 @@ export default function Video({
     </div>
   );
 }
-
-/*
-videoTitle,
-                videoThumb,
-                channelThumb,
-                channelId,
-                channelTitle,
-                videoViews ,
-                videoLong ,
-                videoDate ,
-                */
